@@ -6,7 +6,7 @@ Commandordle is a command-line word guessing game inspired by Wordle. The player
 
 - **Green**: Correct letter in the correct position
 - **Yellow**: Correct letter in the wrong position
-- **Red**: Incorrect letter
+- **Grey**: Incorrect letter
 
 ## Features
 
