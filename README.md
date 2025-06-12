@@ -1,6 +1,4 @@
-# Commandordle
-
-### *Note: Dictionary needs updating. Feel free to add any words you please in filteredwords.txt*
+# Commandordle: Command Prompt Wordle
 
 Commandordle is a command-line word guessing game inspired by Wordle. The player has 6 attempts to guess a randomly chosen 5-letter word. After each guess, the game provides color-coded feedback for each letter:
 
