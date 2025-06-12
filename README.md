@@ -17,9 +17,37 @@ Commandordle is a command-line word guessing game inspired by Wordle. The player
 
 ## Setup
 
-1. **Clone or download the repository.**
-2. Ensure you have Python 3 installed.
-3. The game requires the `colorama` package. If not installed, the game will attempt to install it automatically.
+1. **Clone or download the repository**
+
+2. **Run the setup script to create a virtual environment and install dependencies:**
+   ```bash
+   python setup.py
+   ```
+
+3. **Activate the virtual environment:**
+   - Windows:
+   ```bash
+   .\venv\Scripts\activate
+   ```
+   - Unix/MacOS:
+   ```bash
+   source venv/bin/activate
+   ```
+
+4. **Prepare the word list** (if filteredwords.txt is not present):
+   ```bash
+   python filterer.py
+   ```
+
+5. **Start the game:**
+   ```bash
+   python commandordle.py
+   ```
+
+6. **When finished, deactivate the virtual environment:**
+   ```bash
+   deactivate
+   ```
 
 ## Files
 
