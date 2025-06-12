@@ -65,7 +65,7 @@ def colored_answer(input):
         elif char in dssmbled_word:
             print(colorama.Fore.YELLOW + f"{char}" + colorama.Fore.RESET, end=" ")
         else:
-            print(colorama.Fore.BLACK + f"{char}" + colorama.Fore.RESET, end=" ")
+            print(colorama.Fore.LIGHTBLACK_EX + f"{char}" + colorama.Fore.RESET, end=" ")
         
         index += 1
     print()

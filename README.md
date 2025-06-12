@@ -27,11 +27,11 @@ Commandordle is a command-line word guessing game inspired by Wordle. The player
 3. **Activate the virtual environment:**
    - Windows:
    ```bash
-   .\venv\Scripts\activate
+   .\venv\Scripts\activate.bat
    ```
    - Unix/MacOS:
    ```bash
-   source venv/bin/activate
+   source venv/bin/activate.bat
    ```
 
 4. **Prepare the word list** (if filteredwords.txt is not present):
