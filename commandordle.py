@@ -1,12 +1,6 @@
 import os
 import random
-
-try:
-    import colorama
-except ImportError:
-    print("Colorama not found. Installing...")
-    os.system('pip install colorama')
-    import colorama
+import colorama
 
 chosen_word = ""
 dssmbled_word = []
