@@ -59,6 +59,7 @@ for char in chosen_word:
 
 def colored_answer(input):
     index = 0
+    print("\t", end="")
     for char in input:
         if char == dssmbled_word[index]:
             print(colorama.Fore.GREEN + f"{char}" + colorama.Fore.RESET, end=" ")
@@ -84,26 +85,29 @@ def guess():
 
 clear_terminal()
 
+print(chosen_word)
 while guesses <= 6:
     number_guess[f"g{guesses}"] = guess()
     for char in number_guess[f"g{guesses}"]:
         dssmbled_guesses[f"dg{guesses}"].append(char)
 
     clear_terminal()
-    if number_guess[f"g{guesses}"] == chosen_word:
-        win_condition = True
-        break
 
     # Checking individual letter logic
 
     for value in range(1, (guesses+1)):
         colored_answer(dssmbled_guesses[f"dg{value}"])
 
+    if number_guess[f"g{guesses}"] == chosen_word:
+        win_condition = True
+        break
+
     guesses += 1
 
 
-colored_answer(dssmbled_word)
+
 if win_condition == True:
     print("Congrats! You Won!")
 else:
+    colored_answer(dssmbled_word)
     print("You Lose! Try Again.")
