@@ -93,4 +93,4 @@ colored_answer(dssmbled_word)
 if win_condition == True:
     print("Congrats! You Won!")
 else:
-    print("You Lose! Try Again. \n")
+    print("You Lose! Try Again.")
