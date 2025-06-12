@@ -85,7 +85,6 @@ def guess():
 
 clear_terminal()
 
-print(chosen_word)
 while guesses <= 6:
     number_guess[f"g{guesses}"] = guess()
     for char in number_guess[f"g{guesses}"]:
