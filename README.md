@@ -2,6 +2,8 @@
 
 Commandordle is a command-line word guessing game inspired by Wordle. The player has 6 attempts to guess a randomly chosen 5-letter word. After each guess, the game provides color-coded feedback for each letter:
 
+![Commandordle Screenshot](/assets/theproofisinthepudding.png)
+
 - **Green**: Correct letter in the correct position
 - **Yellow**: Correct letter in the wrong position
 - **Grey**: Incorrect letter
