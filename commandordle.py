@@ -5,7 +5,8 @@ import colorama
 chosen_word = ""
 dssmbled_word = []
 guesses = 1
-words = []
+common_words = []
+possible_words = []
 win_condition = False
 
 dssmbled_guesses = {
@@ -32,14 +33,24 @@ def clear_terminal():
 
 try:
     with open('filteredwords.txt', 'r') as file:
-        words = file.readlines()
+        common_words = file.readlines()
         item = 0
-        for word in words:
-            words[item] = word.rstrip()
+        for word in common_words:
+            common_words[item] = word.rstrip()
             item += 1
-        chosen_word = random.choice(words)
+        chosen_word = random.choice(common_words)
 except:
     print("ERROR: Cannot open filteredwords.txt")
+
+try:
+    with open('filtposwrds.txt', 'r') as file:
+        possible_words = file.readlines()
+        item = 0
+        for word in possible_words:
+            possible_words[item] = word.rstrip()
+            item += 1
+except:
+    print("ERROR: Cannot open filtposwrds.txt")
 
 for char in chosen_word:
     dssmbled_word.append(char)
@@ -63,7 +74,7 @@ def colored_answer(input):
 def guess():
     while True:
         user_guess = (input(f"Please enter guess n{guesses}: ")).upper()
-        if user_guess in words:
+        if user_guess in possible_words:
             break
         else:
             print(f"{user_guess} is not a valid word. Please Try again.")
