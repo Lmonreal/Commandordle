@@ -4,9 +4,16 @@ import random
 try:
     import colorama
 except ImportError:
-    print("Colorama not found. Installing...")
-    os.system('pip install colorama')
-    import colorama
+    try:
+        print("Colorama not found. Installing...")
+        os.system('pip install colorama')
+        import colorama
+    except:
+        print("Unable to install colorama")
+        print("Please install colorama manually to run this game.")
+        exit(1)
+
+# Commandordle - A command-line word guessing game
 
 chosen_word = ""
 dssmbled_word = []
@@ -99,4 +106,4 @@ colored_answer(dssmbled_word)
 if win_condition == True:
     print("Congrats! You Won!")
 else:
-    print("You Lose! Try Again. \n")
+    print("You Lose! Try Again.")
