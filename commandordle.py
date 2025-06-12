@@ -82,6 +82,8 @@ def guess():
     return user_guess
 
 
+clear_terminal()
+
 while guesses <= 6:
     number_guess[f"g{guesses}"] = guess()
     for char in number_guess[f"g{guesses}"]:
